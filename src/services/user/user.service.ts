@@ -22,8 +22,16 @@ export class UserService {
     ];
   }
 
+  private processUsers(users: IUser[]): void {
+    // simulate heavy computation
+    for (let i = 0; i < 10e4; i++) {
+      for (let j = 0; j < 10e4; j++) {}
+    }
+  }
+
   getUsers(): IUser[] {
-    for (let i = 0; i < 10e9; i++) {} // simulate heavy computation
-    return this.createUsers();
+    const users = this.createUsers();
+    this.processUsers(users);
+    return users;
   }
 }

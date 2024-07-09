@@ -1,0 +1,22 @@
+<h2 id="title">Chrome DevTools Demo</h2>
+
+<fieldset>
+  <legend>List of Users</legend>
+
+  <div *ngIf="!hasClickedOnFetch; else loadUsers">
+    <button (click)="fetchUsers()">Fetch Users</button>
+    <p><i>No users yet..</i></p>
+  </div>
+
+  <ng-template #loadUsers>
+    <ul *ngIf="users.length !== 0; else showSpinner">
+      <li *ngFor="let user of users">
+        {{ user.name }}
+      </li>
+    </ul>
+  </ng-template>
+
+  <ng-template #showSpinner>
+    <app-spinner></app-spinner>
+  </ng-template>
+</fieldset>
