@@ -1,0 +1,14 @@
+<h2 id="title">Chrome DevTools Demo</h2>
+
+<fieldset>
+  <legend>List of Users</legend>
+  <button (click)="fetchUsers()">Fetch Users</button>
+  <ul *ngIf="users.length > 0; else noUsers">
+    <li *ngFor="let user of users">
+      {{ user.name }}
+    </li>
+  </ul>
+  <ng-template #noUsers>
+    <p><i>No users yet..</i></p>
+  </ng-template>
+</fieldset>
