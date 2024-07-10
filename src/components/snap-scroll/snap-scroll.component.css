@@ -1,0 +1,11 @@
+.snap-scroll {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.main {
+  height: 100%;
+  padding: 20px;
+}

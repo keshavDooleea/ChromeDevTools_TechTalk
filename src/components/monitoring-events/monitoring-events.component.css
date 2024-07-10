@@ -1,0 +1,11 @@
+.container .text {
+  padding-bottom: 50px;
+}
+
+.container ol > li {
+  padding: 10px 0;
+}
+
+.container ul {
+  margin-left: 40px;
+}

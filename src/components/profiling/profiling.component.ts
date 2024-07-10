@@ -9,12 +9,12 @@ import { UserService } from 'src/services/user/user.service';
 })
 export class ProfilingComponent {
   users: IUser[] = [];
-  hasClickedOnFetch: boolean = false;
 
   constructor(private userService: UserService) {}
 
   fetchUsers(): void {
-    this.hasClickedOnFetch = true;
-    setTimeout(() => (this.users = this.userService.getUsers()));
+    this.users = this.userService.fetchUsers();
   }
+
+  createUser(): void {}
 }

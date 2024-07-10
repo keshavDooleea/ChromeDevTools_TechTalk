@@ -9,27 +9,33 @@ export class UserService {
 
   private createUsers(): IUser[] {
     return [
-      { name: 'John' },
-      { name: 'Alice' },
-      { name: 'Mike' },
-      { name: 'Fabrice' },
-      { name: 'Melissa' },
-      { name: 'Jeane' },
-      { name: 'Marie' },
-      { name: 'Alain' },
-      { name: 'Alek' },
-      { name: 'Francis' },
+      { name: 'john' },
+      { name: 'alice' },
+      { name: 'mike' },
+      { name: 'fabrice' },
+      { name: 'melissa' },
+      { name: 'jeane' },
+      { name: 'marie' },
+      { name: 'alain' },
+      { name: 'alek' },
+      { name: 'francis' },
     ];
   }
 
   private processUsers(users: IUser[]): void {
     // simulate heavy computation
     for (let i = 0; i < 10e4; i++) {
-      for (let j = 0; j < 10e4; j++) {}
+      for (let j = -10e3; j < 10e4; j++) {}
     }
+
+    // capitalize names
+    users.forEach(
+      (user) =>
+        (user.name = user.name.charAt(0).toUpperCase() + user.name.slice(1))
+    );
   }
 
-  getUsers(): IUser[] {
+  fetchUsers(): IUser[] {
     const users = this.createUsers();
     this.processUsers(users);
     return users;
