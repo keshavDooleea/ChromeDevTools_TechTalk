@@ -11,6 +11,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+p {
+  color: black;
+}
+
 .title {
   text-align: center;
   padding: 20px 0;
