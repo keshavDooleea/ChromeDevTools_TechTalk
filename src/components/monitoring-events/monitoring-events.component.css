@@ -1,11 +1,13 @@
-.container .text {
-  padding-bottom: 50px;
-}
-
 .container ol > li {
   padding: 10px 0;
 }
 
 .container ul {
   margin-left: 40px;
+}
+
+.test-btn {
+  display: block;
+  margin: 20px auto 50px auto;
+  padding: 5px;
 }

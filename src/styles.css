@@ -37,8 +37,22 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.abs-bottom-center {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
 .container {
   width: 80vw;
+}
+
+p:hover,
+li:hover {
+  color: #191818bd;
+  transition: 0.125s color;
 }
 
 .pt-20 {
@@ -47,4 +61,8 @@ body {
 
 ol {
   list-style-position: inside;
+}
+
+button {
+  cursor: pointer;
 }

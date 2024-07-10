@@ -7,6 +7,8 @@
     performed on the page or on specific elements.
   </p>
 
+  <button class="test-btn" (click)="onTestClicked($event)">Test</button>
+
   <ol>
     <li>
       Gain access to the <i>$0</i> or <i>temp</i> variable which we can then
@@ -14,18 +16,18 @@
     </li>
 
     <li>
-      Use built-in functions in Chrome DevTools console:
+      Use built-in functions in Chrome DevTools console to detect event firings:
 
       <ul>
         <li>monitorEvents($0, 'keydown')</li>
         <li>unmonitorEvents(temp1, ['keydown', 'click'])</li>
       </ul>
     </li>
-
-    <li>
-      Quick Tip: Right click on any DOM element in the Elements tab and click on
-      <I>Capture Node Screenshot</I> to take a designated screenshot of a DOM
-      element.
-    </li>
   </ol>
 </div>
+
+<p class="abs-bottom-center">
+  Quick Tip: Right click on any DOM element in the Elements tab and click on
+  <I>Capture Node Screenshot</I> to take a designated screenshot of a DOM
+  element.
+</p>
