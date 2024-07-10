@@ -19,6 +19,11 @@ export class UserService {
       { name: 'alain' },
       { name: 'alek' },
       { name: 'francis' },
+      { name: 'sarah' },
+      { name: 'marc' },
+      { name: 'fabien' },
+      { name: 'julie' },
+      { name: 'roberto' },
     ];
   }
 

@@ -1,18 +1,35 @@
 <h2 class="title">Debugging and Profiling Code</h2>
 
-<div class="abs-center container">
-  <p>List of Users</p>
+<div class="container">
+  <ol>
+    <li>Event Listeners breakpoints</li>
+    <li>Performance analysis</li>
+    <li><i>debugger</i> keyword</li>
+  </ol>
 
-  <div *ngIf="users.length === 0; else loadUsers">
-    <button id="fetchUsersButton" (click)="fetchUsers()">Fetch Users</button>
-    <p><i>No users yet..</i></p>
+  <div id="users-container">
+    <div id="users-container-action">
+      <button [disabled]="users.length !== 0" (click)="fetchUsers()">
+        Fetch Users
+      </button>
+      <button [disabled]="users.length === 0" (click)="clearUsers()">
+        Clear Users
+      </button>
+    </div>
+
+    <div id="users-container-body">
+      <div *ngIf="users.length === 0; else loadUsers">
+        <p class="abs-center"><i>No users yet..</i></p>
+      </div>
+
+      <ng-template #loadUsers>
+        <div id="users-list-container">
+          <div class="users-list" *ngFor="let user of users">
+            <img src="assets/user.svg" alt="User" />
+            <p>{{ user.name }}</p>
+          </div>
+        </div>
+      </ng-template>
+    </div>
   </div>
-
-  <ng-template #loadUsers>
-    <ul>
-      <li *ngFor="let user of users">
-        {{ user.name }}
-      </li>
-    </ul>
-  </ng-template>
 </div>

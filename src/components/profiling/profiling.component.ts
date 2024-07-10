@@ -16,5 +16,7 @@ export class ProfilingComponent {
     this.users = this.userService.fetchUsers();
   }
 
-  createUser(): void {}
+  clearUsers(): void {
+    this.users = [];
+  }
 }

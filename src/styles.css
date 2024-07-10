@@ -13,7 +13,7 @@ body {
 
 .title {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 20px 0;
   font-style: italic;
 }
 
@@ -64,5 +64,9 @@ ol {
 }
 
 button {
+  padding: 5px;
+}
+
+button:not(:disabled) {
   cursor: pointer;
 }

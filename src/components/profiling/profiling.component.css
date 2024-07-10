@@ -1,3 +1,58 @@
-fieldset {
-  padding: 20px 10px;
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#users-container {
+  margin: 40px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#users-container-action {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 30px;
+}
+
+#users-container-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#users-container > p {
+  padding-bottom: 40px;
+}
+
+#users-container #users-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  place-items: center;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.users-list img {
+  width: 40px;
 }
