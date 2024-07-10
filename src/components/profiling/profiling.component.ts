@@ -12,7 +12,7 @@ export class ProfilingComponent {
 
   constructor(private userService: UserService) {}
 
-  fetchUsers(): void {
+  initUsers(): void {
     this.users = this.userService.fetchUsers();
   }
 

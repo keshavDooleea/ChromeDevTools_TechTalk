@@ -9,7 +9,7 @@
 
   <div id="users-container">
     <div id="users-container-action">
-      <button [disabled]="users.length !== 0" (click)="fetchUsers()">
+      <button [disabled]="users.length !== 0" (click)="initUsers()">
         Fetch Users
       </button>
       <button [disabled]="users.length === 0" (click)="clearUsers()">
